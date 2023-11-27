@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PYCODE" > "$TMP_PYFILE"; python3 "$TMP_PYFILE"; rm -f "$TMP_PYFILE"
+python3 <<EOF $PYCODE EOF
