@@ -2,7 +2,7 @@
 """
     class square that impelements rectangle
 """
-from model.rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -13,7 +13,7 @@ class Square(Rectangle):
         """
             square constructor
         """
-        super.__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
