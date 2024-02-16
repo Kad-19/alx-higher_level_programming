@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Class rectangle that implements base"""
+"""
+    Class rectangle that implements base
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """class rectangle.
+    """
+        class rectangle.
         Methods:
             __init__()
     """
