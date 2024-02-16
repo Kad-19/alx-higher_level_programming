@@ -116,8 +116,10 @@ class Rectangle(Base):
             prints the rectangle with '#'
         """
         rectangle = ""
+
+        print("\n" * self.y, end="")
         for i in range(self.height):
-            rectangle += ('#' * self.width) + '\n'
+            rectangle += (" " * self.x) + ('#' * self.width) + '\n'
         print(rectangle, end="")
 
     def __str__(self):
