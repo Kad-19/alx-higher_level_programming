@@ -8,12 +8,10 @@ from models.base import Base
 class Rectangle(Base):
     """
         class rectangle.
-        Methods:
-            __init__()
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-            Initiaizes the instance of the class...
+            Initiaizes the instance of the class.
         """
         super().__init__(id)
         self.width = width
@@ -24,7 +22,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """
-            getter for __width
+            getter for width
             Returns: width
         """
         return self.__width
@@ -153,3 +151,11 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        """
+            returns the dictionary repr of a rect
+        """
+        return {'x': getattr(self, "x"), 'y': getattr(self, "y"),
+                'id': getattr(self, "id"), 'height': getattr(self, "height"),
+                'width': getattr(self, "width")}
